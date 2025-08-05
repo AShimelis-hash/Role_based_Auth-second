@@ -1,20 +1,15 @@
-import { useNavigate }  from  "react-router-dom";
+
 import React from 'react';
-
-const UnAuthorized = () => {
-    const navigate = useNavigate();
-
-    const goBack = () => {
-        navigate(-1);
-    };
-
+import { Navigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+const AuthContext = () => {
+    const { user } = useAuth();
+    if (!user) {
+        return <Navigate to="/login" />;
+    }
     return (
-        <section className="unauthorized">
-            <h2>Unauthorized Access</h2>
-            <p>You do not have permission to view this page.</p>
-            <button onClick={goBack}>Go Back</button>
-        </section>
-    );
+        <div>AuthContext</div>
+    )
 }
 
-export default UnAuthorized;
+export default AuthContext;

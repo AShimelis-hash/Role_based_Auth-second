@@ -1,6 +1,6 @@
 import {useRef, useState, useEffect} from 'react';
 import useAuth from '../../Hooks/useAuth';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 
@@ -12,7 +12,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/'; // Redirect to dashboard or default path
+    const from = location.state?.from?.pathname || '/'; 
       
     const userRef = useRef();
     const errRef = useRef();

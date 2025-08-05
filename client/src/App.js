@@ -15,7 +15,7 @@ import { Route } from 'react-router-dom'
 import Layout from './components/Layout/Layout.js'
 
 import Register from './components/Login/Register.js'
-import Linkage from './pages/Linkage.js'
+import Linkage from './pages/UnAuthorized/Linkage.js'
 import UnAuthorized from './components/UnAuthorized/UnAuthorized.js';
 import Dashboard from './pages/Dashboard/Dashboard.js';
 import RequireAuth from './components/Login/RequireAuth.js';
